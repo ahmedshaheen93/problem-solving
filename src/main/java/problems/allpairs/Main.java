@@ -1,4 +1,4 @@
-package allpairs;
+package problems.allpairs;
 public class Main{
 
     public static void main(String[] args){

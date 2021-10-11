@@ -1,4 +1,4 @@
-package first.demo;
+package problems.first.demo;
 import java.util.*;
 public class Main{
   public static void main(String args[]){
