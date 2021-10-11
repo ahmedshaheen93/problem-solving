@@ -1,5 +1,9 @@
 package problems.demos;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 /**
  * Given 2 arrays, create a function that lets a user know (true/false) whether these two arrays contain any common items
  * <br>
@@ -24,11 +28,10 @@ package problems.demos;
 public class FindCommonItems {
 
     public boolean containAnyCommonItems(String[] array1, String[] array2) {
-        for (String value : array1) {
-            for (String s : array2) {
-                if (value.equals(s)) {
-                    return true;
-                }
+        Set<String> strings = new HashSet<>(List.of(array1));
+        for (String s : array2) {
+            if (strings.contains(s)) {
+                return true;
             }
         }
         return false;
