@@ -1,7 +1,5 @@
 package problems.arrays;
 
-import java.math.BigInteger;
-
 /**
  * You are given a large integer represented as an integer array digits,where each digits[i] is the ith digit of the integer.
  * <p>
@@ -62,16 +60,16 @@ import java.math.BigInteger;
  */
 public class PlusOne {
     public int[] plusOne(int[] digits) {
-        StringBuilder stringBuilder = new StringBuilder();
-        for (int digit : digits) {
-            stringBuilder.append(digit);
+        int n = digits.length;
+        for (int i = digits.length - 1; i >= 0; i--) {
+            if (digits[i] < 9) {
+                digits[i] = digits[i] + 1;
+                return digits;
+            }
+            digits[i] = 0;
         }
-        BigInteger bigDecimal = new BigInteger(stringBuilder.toString());
-        String sumString = String.valueOf(bigDecimal.add(BigInteger.ONE));
-        int[] result = new int[sumString.length()];
-        for (int i = 0; i < sumString.length(); i++) {
-            result[i] = Integer.parseInt("" + sumString.charAt(i));
-        }
-        return result;
+        int[] res = new int[n + 1];
+        res[0] = 1;
+        return res;
     }
 }
