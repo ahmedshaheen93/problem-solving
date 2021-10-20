@@ -30,11 +30,24 @@ class FirstUniqueCharacterTest {
     }
 
     /**
+     * <b>case 3</b>
+     * <br>
      * Input: s = "aabb"
      * Output: -1
      */
     @Test
     void case3() {
         assertThat(firstUniqueCharacter.firstUniqChar("aabb")).isEqualTo(-1);
+    }
+
+    /**
+     * <b>case 4</b>
+     * <br>
+     * Input: s = "aabbccddeef"
+     * Output: -1
+     */
+    @Test
+    void case4() {
+        assertThat(firstUniqueCharacter.firstUniqChar("aabbccddeef")).isEqualTo(10);
     }
 }

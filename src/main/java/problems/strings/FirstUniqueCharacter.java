@@ -27,7 +27,6 @@ public class FirstUniqueCharacter {
         if (s.length() == 0) {
             return 0;
         }
-        int index = -1;
         for (int i = 0; i < s.length(); i++) {
             boolean found = false;
             for (int j = 0; j < s.length(); j++) {
@@ -40,6 +39,6 @@ public class FirstUniqueCharacter {
                 return i;
             }
         }
-        return index;
+        return -1;
     }
 }
